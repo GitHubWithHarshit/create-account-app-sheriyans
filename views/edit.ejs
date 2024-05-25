@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All users are here</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="w-full min-h-screen bg-zinc-900 p-5">
+    <a class="text-blue-500 underline" href="/read">see all users</a>
+    <div class="form-box flex justify-center mt-24">
+        <form class="flex flex-col border border-zinc-800 w-96 py-5 rounded-lg text-white" action="/update/<%=user._id%>" method="post">
+            <label class="flex justify-center"><h1 class="text-white text-2xl tracking-tighter">Update your account</h1></label>
+            <input class=" px-5 py-3 m-2 outline-none mt-5 rounded-lg bg-zinc-800 " placeholder="name" name="name" type="text" value="<%= user.name%>">
+            <input class=" px-5 py-3 m-2 outline-none mt-5 rounded-lg bg-zinc-800 " placeholder="email" name="email" type="text" value="<%= user.email %>">
+            <input class=" px-5 py-3 m-2 outline-none mt-5 rounded-lg bg-zinc-800 " placeholder="Image" name="Image" type="text" value="<%=user.Image%>">
+            <input class=" px-5 py-3 m-2 outline-none mt-10 rounded-lg bg-green-600  text-xl" value="Update account" type="submit">
+        </form>
+    </div>
+</body>
+
+</html>
